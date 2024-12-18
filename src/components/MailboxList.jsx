@@ -1,6 +1,16 @@
-const MailboxList = () =>{
+import { Link } from 'react-router-dom';
+
+const MailboxList = ({mailbox}) =>{
   return(
-    <h1>Displays an index list of all mailboxes</h1>
+    <div>
+      {mailbox.map((box, index)=>(
+        <div key={index} className="mail-box">
+          <Link to={`/MailboxDetails/${box._id}`}>
+            {box._id}
+          </Link>
+        </div>
+      ))}
+    </div>
   )
 }
 

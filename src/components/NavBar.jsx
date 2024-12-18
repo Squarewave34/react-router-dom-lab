@@ -5,8 +5,8 @@ const NavBar = ()=>{
     <nav>
       <ul>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/mailboxes">MailboxList</Link></li>
-        <li><Link to="/mailboxForm">MailboxForm</Link></li>
+        <li><Link to="/mailboxes">Mailboxes</Link></li>
+        <li><Link to="/mailboxForm">New Mailbox</Link></li>
       </ul>
     </nav>
   )

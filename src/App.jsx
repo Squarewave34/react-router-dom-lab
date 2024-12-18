@@ -1,3 +1,4 @@
+import './App.css';
 import NavBar from "./components/NavBar";
 import { Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
@@ -25,13 +26,16 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={
-          <h1>home</h1>
+          <h1>Post Office</h1>
         }/>
         <Route path="/mailboxes" element={
-          <MailboxList />
+          <MailboxList mailbox={mailbox}/>
         }/>
         <Route path="/mailboxForm" element={
-          <MailboxForm />
+          <MailboxForm addMailbox={addMailbox}/>
+        }/>
+        <Route path="/MailboxDetails/:mailboxId" element={
+          <MailboxDetails mailbox={mailbox}/>
         }/>
         <Route path="*" element={
           <h1>Mailbox Not Found!</h1>
