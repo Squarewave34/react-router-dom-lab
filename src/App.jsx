@@ -1,6 +1,11 @@
+import NavBar from "./components/NavBar";
+
 const App = () => {
   return (
-    <h1>The root component that orchestrates the entire application</h1>
+    <>
+      <NavBar />
+      <h1>The root component that orchestrates the entire application</h1>
+    </>
   )
 };
 
